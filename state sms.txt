@@ -1,0 +1,27 @@
+{"sms_cmd":"4","sms_cmd_status_result":"1"} wait
+{"sms_cmd":"4","sms_cmd_status_result":"3"} done ready 
+{"sms_cmd":"4","sms_cmd_status_result":"2"} faield to send sms
+
+حالة اخر sms مرسل 
+curl --location 'http://192.168.0.1/goform/goform_get_cmd_process?cmd=sms_cmd_status_info&sms_cmd=4&isTest=false&_=1732885643921' \
+--header 'Accept: application/json, text/javascript, */*; q=0.01' \
+--header 'Accept-Language: en-GB,en;q=0.9,en-US;q=0.8,ar;q=0.7,fr;q=0.6' \
+--header 'Cache-Control: no-cache' \
+--header 'Connection: keep-alive' \
+--header 'Pragma: no-cache' \
+--header 'Referer: http://192.168.0.1/index.html' \
+--header 'User-Agent: Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Mobile Safari/537.36 Edg/131.0.0.0' \
+--header 'X-Requested-With: XMLHttpRequest'
+
+
+// حذف رسائل 
+curl 'http://192.168.0.1/goform/goform_get_cmd_process?cmd=sms_cmd_status_info&sms_cmd=6&isTest=false&_=1732961860931' \
+  -H 'Accept: application/json, text/javascript, */*; q=0.01' \
+  -H 'Accept-Language: en-GB,en;q=0.9,en-US;q=0.8,ar;q=0.7,fr;q=0.6' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Connection: keep-alive' \
+  -H 'Pragma: no-cache' \
+  -H 'Referer: http://192.168.0.1/index.html' \
+  -H 'User-Agent: Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Mobile Safari/537.36 Edg/131.0.0.0' \
+  -H 'X-Requested-With: XMLHttpRequest' \
+  --insecure
